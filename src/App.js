@@ -3,6 +3,7 @@ import { Route, Switch} from "react-router";
 import Contact from "./Contact";
 import About from "./About";
 import Error from "./Error";
+import Menu from "./Menu";
 
 const App = () => {
 
@@ -12,14 +13,13 @@ const App = () => {
 
   return (
     <>
+    <Menu/>
     <Switch>
       <Route exact path='/' component={About} />
       <Route exact path='/contact' component={Contact} />
       <Route path='/contact/Name' component={Name} />
       <Route component={Error} />
-    </Switch>
-
-     
+    </Switch>     
     </>
   )
 };
